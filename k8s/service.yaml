@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: edward-ciggaar-nextjs-app
+    app.kubernetes.io/instance: edward-ciggaar-nextjs-app-instance
+    app.kubernetes.io/name: edward-ciggaar-nextjs-app
+  name: edward-ciggaar-nextjs-app
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app.kubernetes.io/instance: edward-ciggaar-nextjs-app-instance
+    app.kubernetes.io/name: edward-ciggaar-nextjs-app
+  sessionAffinity: None
+  type: ClusterIP
