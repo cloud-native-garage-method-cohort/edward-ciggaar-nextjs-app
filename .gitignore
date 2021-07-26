@@ -1,0 +1,11 @@
+# next.js build output
+.next
+
+# Dependency directories
+node_modules/
+
+# kustomisation output
+manifests.yaml
+
+# MacOS related files
+**.DS_Store
